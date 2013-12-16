@@ -1,0 +1,8 @@
+name: SITE NAME
+url: http://jayperryworks.com
+baseurl: 
+
+markdown: redcarpet
+pygments: true
+
+exclude: ["README.md", "config.rb", "*.sublime-project", "*.sublime-workspace", "Guardfile", "Gemfile", "Gemfile.lock", ".sass-cache"]

@@ -1,0 +1,41 @@
+.hero {
+	@extend %theme-flood;
+	@include rem(padding, 50px 0);
+	@include background(radial-gradient(lighten($color-bg--dark, 10), darken($color-bg--dark, 5)));
+	position: relative;
+	text-align: center;
+
+	.button {
+		margin: em-calc(24px) 0;
+	}
+}
+
+	.hero-brand {
+		@include rem(margin, 0 0 40px 0);
+		position: relative;
+
+		& > .logo.large {
+			@include inline-block;
+			// @include rem(max-width, 150px);
+			@include rem(margin, 12px 0);
+		}
+
+	}
+
+	.hero-image {
+		@include grid-column(12);
+		@include rem(margin-bottom, 40px);
+		text-align: center !important;
+
+		& > img {
+			@include inline-block;
+		}
+
+		@media #{$small} {
+			@include grid-column(10, $center: true);
+		}
+
+		@media #{$medium} {
+			@include grid-column(8, $center: true);
+		}
+	}

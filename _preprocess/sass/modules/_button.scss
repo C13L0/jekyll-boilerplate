@@ -1,0 +1,139 @@
+// Buttons
+// ----------------------------------------------------------------------------
+
+// create a bevel/3d effect on a button
+@mixin button-bevel($color: $black, $height: 4px) {
+  $specs: 0px $height 0px 0px $color;
+  box-shadow: $specs;
+  top: -#{$height};
+}
+
+@mixin FA-button($type: "primary") {
+  @include button-base;
+  @include single-transition;
+  @include radius;
+  box-shadow: none; // reset the default foundation "bevel"
+  font-family: $museo-700;
+  border: none;
+
+  &:active {
+    transition: none;
+    @include button-bevel($height: 0px);
+  }
+
+  @if ($type == "primary") {
+    @include button-style($bg: $orange);
+    @include text-inset(darken($orange, 15%));
+    @include button-bevel;
+    color: white;
+
+    &:active {
+      background: darken($orange, 10);
+      @include button-bevel($height: 0px);
+    }
+  }
+  @if ($type == "secondary") {
+    @include button-style($bg: $light-blue);
+    @include button-bevel($height: 1px);
+    color: $dark-gray;
+
+    &:active {
+      background: lighten($light-blue, $button-function-factor);
+    }
+  }
+  @if ($type == "alert") {
+    @include button-style($bg: $red);
+    @include button-bevel($height: 1px);
+    color: white;
+
+    &:active {
+      background: lighten($red, $button-function-factor);
+    }
+  }
+  @if ($type == "utility") {
+    @include button-style($bg: lighten($med-gray, 10%));
+    @include button-bevel($height: 1px);
+    color: white;
+
+    &:active {
+      background: lighten(lighten($med-gray, 10%), $button-function-factor);
+    }
+  }
+}
+
+// overrides foundation default classnames
+// .button {
+//   @include FA-button;
+// }
+
+.button.primary {
+  @include FA-button(primary);
+  @include button-size($button-lrg);
+}
+.button.secondary {
+  @include FA-button(secondary);
+}
+.button.alert {
+  @include FA-button(alert);
+}
+.button.utility {
+  @include FA-button(utility);
+}
+.button.dropdown {
+
+}
+
+.button.small {
+  font-family: $museo-500;
+  @include rem(font-size, 14px);
+}
+
+.button-group {
+
+  & > li {
+    @include button-group-style($radius: true);
+
+    &:last-child > .button {
+      margin: 0;
+    }
+  }
+  .button {
+    border-radius: 0;
+    margin-right: 2px;
+  }
+}
+
+// for buttons attached to forms.
+// "prefix" buttons display to the left of the input, "postfix" to the right
+@mixin FA-button-prepostfix($type: "postfix") {
+  @include prefix-postfix-base;
+  @if ($type == "prefix") {
+    @include prefix($bg: $light-blue, $is-button: true);
+    border-top-left-radius: $global-radius;
+    border-bottom-left-radius: $global-radius;
+  } @else {
+    @include postfix($bg: $light-blue, $is-button: true);
+    border-top-right-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
+  }
+  
+  @include button-bevel($color: $black, $height: 1px);
+  @include single-transition;
+
+  &:hover {
+    background: darken($light-blue, $button-function-factor)
+  }
+
+  &:active {
+    @include button-bevel($color: $black, $height: 0);
+    background: lighten($light-blue, $button-function-factor);
+  }
+} 
+
+.button.prefix {
+  @include FA-button-prepostfix(prefix);
+}
+
+.button.postfix {
+  @include FA-button-prepostfix(postfix);
+}

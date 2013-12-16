@@ -1,0 +1,41 @@
+// ==========================================================================
+//  Strip modules
+// ==========================================================================
+
+// BASE
+// -----------------------------------------------------------------------------
+
+.strip {
+	@include rem(padding, 40px 0);
+	position: relative;
+	// z-index: $base-z--low;
+	
+	@media #{$small} {
+		@include rem(padding-top, 50px);
+	}
+
+	@media #{$medium} {
+		@include rem(padding-top, 60px);
+	}
+}
+
+// SUBMODULES/VARIANTS
+// -----------------------------------------------------------------------------
+
+// add a triangle to .strip.well if it follows a regular .strip class
+.strip.well {
+	border-width: 1px 0;
+
+	&.arrow {
+		@include triangle--centered($width: 22px, $color: lighten($med-gray, 10), $selector: before);
+		@include triangle--centered($loc: -1px, $width: 20px, $color: white);
+	}
+}
+
+.strip.collapse-bottom {
+	padding-bottom: 0;
+}
+
+.strip.collapse-top {
+	padding-top: 0;
+}

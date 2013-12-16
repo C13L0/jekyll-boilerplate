@@ -1,0 +1,35 @@
+// ==========================================================================
+//  Header modules
+// ==========================================================================
+
+// BASE
+// -----------------------------------------------------------------------------
+
+.header {
+	
+}
+
+// SUBMODULES
+// -----------------------------------------------------------------------------
+
+[role="banner"].global {
+	// @extend %theme-dark;
+	// @include single-transition;
+	@include base-grid-margins($property: padding, $full: true, $add-gutter: true);
+	@include rem(height, $header-h);
+	display: block;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	z-index: $base-z--high;
+	background: $color-header;
+	border-bottom: 1px solid $black;
+}
+
+// [role="banner"].is-sticky {
+// 	position: fixed;
+// 	top: -#{$header-h};
+// }

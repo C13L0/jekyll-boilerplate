@@ -10,14 +10,13 @@ This is the basic boilerplate I use for my design prototypes. It includes all th
 ## To install:
 1. Make a new folder and initialize a new git repo:
 
-````
-git init
-touch README
-git add README
-git commit -m 'first commit, added README'
-git remote add origin { remote SSL }
-git push origin master
-````
+	git init
+	touch README
+	git add README
+	git commit -m 'first commit, added README'
+	git remote add origin { remote SSL }
+	git push origin master
+
 
 2. Then clone this repo and copy the file into your new folder
 
@@ -27,19 +26,21 @@ git push origin master
 
 5. Finally, run the jekyll/guard commands:
 
-````
-# for github pages:
-bundle exec jekyll serve --w
-# in another terminal tab
-bundle exec guard
-````
+###### for github pages:
 
-- or -
+	bundle exec jekyll serve --w
 
-````
-# for non-github pages sites:
-# in the Gemfile:
-# comment out "gem github-pages" 
-# uncomment "gem guard-jekyll-plus"
-bundle exec guard
-````
+in another terminal tab:
+
+	bundle exec guard
+
+_or_
+
+###### for non-github pages sites:
+
+in the Gemfile:
+- comment out "gem github-pages" 
+- uncomment "gem guard-jekyll-plus"
+
+	bundle exec guard
+

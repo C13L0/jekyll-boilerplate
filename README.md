@@ -9,13 +9,15 @@ This is the basic boilerplate I use for my design prototypes. It includes all th
 
 ## To install:
 1. Make a new folder and initialize a new git repo:
-  
+
+````
     git init
     touch README
     git add README
   	git commit -m 'first commit, added README'
   	git remote add origin { remote SSL }
   	git push origin master
+````
 
 
 2. Then clone this repo and copy the files into your new folder
@@ -33,7 +35,6 @@ This is the basic boilerplate I use for my design prototypes. It includes all th
 in another terminal tab:
 
   	bundle exec guard
-
 
 _or_
 

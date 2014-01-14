@@ -60,11 +60,6 @@ ol, ul {
 
 a {
 	@include animation(all $base-duration);
-
-	&:hover {
-		border-bottom-style: dotted;
-		border-bottom-width: 1px;
-	}
 }
 
 .amp {

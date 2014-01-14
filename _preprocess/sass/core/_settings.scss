@@ -28,12 +28,12 @@ $type-line_height: 1.5;
 // --------------------------------------------------------------------------
 
 // --- breakpoints ----------------------------------------------------------
-$breakpoints: breakpoints();
+$xsmall: 480px;
+$small: 768px;
+$medium: 1240px;
+$large: 1440px;
 
-$xsmall: nth($breakpoints, 1);
-$small: nth($breakpoints, 2);
-$medium: nth($breakpoints, 3);
-$large: nth($breakpoints, 4);
+$breakpoint-to-ems: true;
 
 
 // --- grid variables -------------------------------------------------------

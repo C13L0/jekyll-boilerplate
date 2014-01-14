@@ -34,9 +34,8 @@ in another terminal tab:
 
   	bundle exec guard
 
-****
+
 _or_
-****
 
 ###### for non-github pages sites:
 

@@ -66,3 +66,8 @@ in the Gemfile:
 
   	bundle exec guard
 
+#### To preview locally w/github pages:
+
+````
+    jekyll serve --baseurl ''
+````

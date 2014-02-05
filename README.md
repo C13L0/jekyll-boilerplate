@@ -69,5 +69,5 @@ in the Gemfile:
 #### To preview locally w/github pages:
 
 ````
-    jekyll serve --baseurl ''
+    jekyll serve --baseurl '' --w
 ````

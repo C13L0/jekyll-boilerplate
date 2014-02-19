@@ -17,6 +17,12 @@
 
       <link rel="stylesheet" href="{{ site.baseurl }}{{ relativepath }}assets/css/app.css">
       <script src="{{ site.baseurl }}{{ relativepath }}assets/js/vendor/modernizr.custom.11128.js"></script>
+      <script>
+        // add the "main" element to html5 shiv -- modernizr does not include yet
+        // http://drublic.de/blog/add-main-element-modernizr/
+        window.html5.elements = 'main'; // add to list
+        window.html5.shivDocument(document); // re-invoke the `shivDocument` method
+    </script>
   </head>
   <body id="{% if page.slug %}{{ page.slug | downcase }}{% else %}{{ page.title | downcase }}{% endif %}">
     <header role="banner">

@@ -17,7 +17,7 @@ This is the basic boilerplate I use for my design prototypes. It includes all my
 - [SASS](http://sass-lang.com) & [Compass](http://compass-style.org): life didn't really begin on planet earth until there were CSS preprocessors.
 - [Bourbon library](http://bourbon.io): requires SASS. Lots of nice mixins for special effects and polyfills.
 - [Singularity.gs grid system](http://singularity.gs): my current favorite grid framework. It's lightweight, incredibly configurable, and uses the "[isolation method](http://palantir.net/blog/responsive-design-s-dirty-little-secret)" by default, solving annoying bugs with sub-pixel rendering in many browsers.
-- The CSS organization and (most) naming conventions are based on the [MVCSS framework](http://mvcss.github.io/library/), which is a great scheme for making CSS more maintainable and reusable on projects of any scale.
+- The CSS organization and (most) naming conventions are based on the [MVCSS framework](http://mvcss.github.io), which is a great scheme for making CSS more maintainable and reusable on projects of any scale.
 
 ### JS
 - [JQuery](http://jquery.com). Though I like [MooTools]() for bigger projects.

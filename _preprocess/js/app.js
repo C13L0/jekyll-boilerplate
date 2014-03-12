@@ -19,6 +19,12 @@
     init : function(config) {
       $.extend(SITE_NAME.config, config);
 
+      // fall back to .animate() frame animation is CSS transitions are not supported
+      // -> for transit.js
+      if (!$.support.transition) {
+        $.fn.transition = $.fn.animate;
+      }
+
 
     },
 

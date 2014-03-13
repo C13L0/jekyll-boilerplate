@@ -4,7 +4,11 @@
 
 $path-images: "../images/";
 
-$base-duration: 0.5; // in seconds
+$base-duration: 0.5s; // in seconds
+
+%base-transition {
+  @include transition (all $base-duration);
+}
 
 // Colors
 // --------------------------------------------------------------------------
